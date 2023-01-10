@@ -137,6 +137,16 @@
   - `git diff HEAD` 显示工作区和版本库差异
 - `git blame [ filename ]`
   - 以列表形式查看文件的历史修改
+- `git checkout` 检出命令
+  - [参考教程-很不错](https://www.bbsmax.com/A/Gkz1QmYnzR/)
+  - `git checkout [ commit_id ] -- [ filename or dir]`
+    - 从指定提交中覆盖当前工作区和暂存区文件
+    - 未指定`commit_id`，则从暂存区中覆盖工作区
+    - `--`用于分割`commit_id`和`filename`，解决两者重名冲突
+  - `git checkout [ branch_name ]`
+    - 从指定分支覆盖当前工作区和暂存区，并将`HEAD`指向改分支，实现了分支切换
+  - `git checkout [ branch_name ] -- [ filename ]`
+    - 从指定分支的提交中文件覆盖当前工作区和暂存区的文件，不切换`HEAD`和分支
 
 ##Git配置问题
 
